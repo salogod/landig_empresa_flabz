@@ -75,6 +75,7 @@ section{
 .blogs .box-container .box .content{
     padding:2rem;
     background: #222;
+    height: 300px;
 }
 
 .blogs .box-container .box .content h3{
