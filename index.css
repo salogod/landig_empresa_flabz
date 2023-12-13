@@ -1,0 +1,230 @@
+/* Base styles for all screen sizes */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  transition: 0.7s;
+  padding: 30px 20px;
+  z-index: 10;
+}
+
+header.abajo {
+  background: #1B1B1B;
+  padding: 15px 20px;
+}
+
+header .logo {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 2px;
+  transition: 1.5s;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  font-family: arial;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #1B1B1B;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: 0.7s;
+
+  display: inline-block;
+  padding: 7px 20px;
+  background-color: #ffffff;
+  color: #1B1B1B;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: Arial;
+}
+
+header.abajo .logo,
+header.abajo ul li a {
+  color: #1B1B1B;
+}
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  header .logo {
+    font-size: 1.5em;
+  }
+
+  header ul li a {
+    font-size: 16px;
+  }
+
+  /* Make the menu items into dropdowns */
+  header ul li {
+    display: none;
+  }
+
+  header ul li a:hover {
+    display: block;
+    width: 100%;
+  }
+
+  /* Add a dropdown arrow to the menu items */
+  header ul li a:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* Move the dropdown arrow to the side of the logo */
+  header ul li a:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* Show the menu when the logo is clicked */
+  header .logo:hover ~ ul {
+    display: block;
+  }
+}
+
+header .logo {
+  cursor: pointer;
+}
+
+
+
+/* codigo para imagen slide*/
+.slider{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: 1px;
+}
+.slider ul{
+    display: flex;
+    animation: cambio 20s infinite alternate linear;
+    width: 400%;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+  .slider, .slider ul, .slider img{
+      height: 70vh;
+  }
+  }
+
+.slider {
+  position: relative; /* Posiciona el contenedor principal en relativo */
+}
+
+.slider ul {
+  position: relative; /* Posiciona la lista de imágenes en relativo */
+}
+
+.slider li {
+  position: relative; /* Posiciona cada imagen en relativo */
+}
+
+.slider-caption {
+  position: absolute; /* Posiciona el recuadro de texto en absoluto */
+  bottom: 80px; /* Coloca el recuadro en la parte inferior */
+  left: 80px; /* Coloca el recuadro en la parte izquierda */
+  background-color: rgba(0, 0, 0, 0.5); /* Agrega un fondo semi-transparente */
+  padding: 30px; /* Agrega margen interno */
+  color: white; /* Establece el color del texto */
+  text-align: center; /* Centra el texto */
+  border-radius: 10px;
+}
+@media only screen and (max-width:320px){
+  .slider, .slider ul, .slider img{
+      height: 100vw;
+  }
+  }
+
+  .slider img{
+    object-fit: cover;
+}
+
+@media only screen and (max-width:768px){
+.slider{
+    height: 600px;
+    margin: 0;
+}
+.slider-caption{
+    font-size: 14px;
+    max-width: 100%;
+}
+}
+
+header .logo {
+  width: 110px; /* Adjust the width as needed */
+  margin-left: -1000; /* Adjust the margin as needed */
+}
+
+/* imagen doble con texto*/
+.wraper {
+  margin: 10px auto;
+  width: 100%;
+}
+.wraper img{
+  max-width: 100%;
+  float: left;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.text-box h3{
+  font-size: 34px;
+}
+
+.text-box p{
+  font-size: 14px;
+  text-align: justify;
+}
